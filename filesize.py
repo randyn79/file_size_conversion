@@ -3,7 +3,7 @@
 def file_size_conversion(from_unit, from_value, to_unit):
     file_size_unit = { 'bytes': 0, 'kilobytes': 1, 'megabytes': 2,
                       'gigabytes': 3, 'terabytes': 4}
-    
+
     steps = abs(file_size_unit[from_unit] - file_size_unit[to_unit])
     print(steps)
 
@@ -18,13 +18,13 @@ def file_size_conversion(from_unit, from_value, to_unit):
     elif file_size_unit[from_unit] == file_size_unit[to_unit]:
         result = from_value
         return f'{result} no calculations made, unit specified is the same as unit to be converted'
-    
+
 
     else:
         print('Invalid Input')
 
 if __name__ == "__main__":
-    
+
     while True:
         print("What unit are you converting from?")
         print("Available options are bytes, kilobytes, megabytes, gigabytes and terabytes")
@@ -46,8 +46,8 @@ if __name__ == "__main__":
             break
         else:
             print('Invalid Input!!!')
-        
-            
+
+
     print()
     while True:
         from_value = input(f'How many {from_unit} would you like to convert?').casefold()
@@ -77,20 +77,8 @@ if __name__ == "__main__":
             break
         else:
             print('Invalid Input!!!')
-        
+
     print()
     answer = file_size_conversion(from_unit, from_value, to_unit)
     print()
     print(f'{from_value} {from_unit}s is equivalent to {answer} {to_unit}')
-
-   
-
-
-
-
-
-
-
-
-
-
